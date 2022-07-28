@@ -1,0 +1,51 @@
+main .container {
+  background-color: aquamarine;
+
+}
+
+main .container .commodity-list {
+  border: 1px solid #000;
+  width: 100%;
+  background-color: burlywood;
+  display: flex;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+main .container .commodity-list img {
+ width:20%;
+ margin-left: 10px;
+ height: 100%;
+background-image: url();
+ background-position: center;
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+main .container .commodity-list .commodity-introduce {
+  width: 40%;
+  margin-left: 10px;
+}
+
+main .container .commodity-list .commodity-introduce .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main .container .commodity-list .commodity-introduce .describe {
+  height: 180px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  border-bottom: 5px black;
+}
+
+main .container .commodity-list .price {
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.commodity-list .manage{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+/*# sourceMappingURL=merchandise.css.map */

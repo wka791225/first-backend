@@ -1,0 +1,41 @@
+.container > form {
+  width: 100%;
+  font-size: 25px;
+  padding: 50px;
+  background-color: #b9b9ff;
+}
+
+.container > form .row {
+  margin: 10px 0 0 0;
+}
+
+.container > form .row.custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container > form .row.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container > form .row.btn a {
+  padding: 1px 6px;
+  color: #767778;
+  background-color: bisque;
+  margin-right: 50px;
+  border-style: outset;
+  border-color: -interal-light-dark(#767778, #64631e);
+  -o-border-image: initial;
+     border-image: initial;
+}
+/*# sourceMappingURL=create.css.map */

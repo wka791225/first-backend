@@ -1,0 +1,77 @@
+.container > form {
+  width: 100%;
+  padding: 50px;
+  background-color: #b9b9ff;
+}
+
+.container > form .row {
+  margin: 10px 0 0 0;
+}
+
+.container > form .row #name {
+  margin-left: 30px;
+}
+
+.container > form .row #amount {
+  margin-left: 30px;
+}
+
+.container > form .row.custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container > form .row.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container > form .row.btn a {
+  padding: 1px 6px;
+  color: #767778;
+  background-color: bisque;
+  margin-right: 50px;
+  border-style: outset;
+  border-color: -interal-light-dark(#767778, #64631e);
+  -o-border-image: initial;
+     border-image: initial;
+}
+form .img-card{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+form .img-card img{
+    width: 100%;
+    height: 100%;
+}
+form .img-card .delete-img{
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+/*# sourceMappingURL=mrch-create.css.map */
