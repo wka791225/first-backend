@@ -51,7 +51,8 @@ Route::middleware('auth')->group(function(){
 
 
     //根據請求，對應到相對的controller
-    Route::get('/page',[NewsController::class,'index']);
+    // 加入判別自訂化middleware
+    Route::middleware('check')->get('/page',[NewsController::class,'index']);
     //檢視資料
     Route::get('/blog',[BlogController::class,'index']);
     //屬性要一樣 新增/儲存資料表

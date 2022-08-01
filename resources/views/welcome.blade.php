@@ -128,5 +128,11 @@
                 </div>
             </div>
         </div>
+        @if (session('message'))
+
+        <script>
+            alert('{{session("message ")}}')
+        </script>
+        @endif
     </body>
 </html>
