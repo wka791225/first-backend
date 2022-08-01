@@ -131,7 +131,7 @@
         @if (session('message'))
 
         <script>
-            alert('{{session("message ")}}')
+            alert('{{session("message")}}')
         </script>
         @endif
     </body>

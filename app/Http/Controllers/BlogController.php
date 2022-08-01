@@ -20,7 +20,7 @@ class BlogController extends Controller
     }
     public function create()
     {
-        return view('index-create');
+        return view('backstage.text.index-create');
     }
     public function store(Request $request)
     {
@@ -86,8 +86,8 @@ class BlogController extends Controller
         //Text::where()->get();
 
         $article = Text::find($id);
-        //dd($article);
-        return view('index-edit', compact('article'));
+        // dd($article);
+        return view('backstage.text.index-edit', compact('article'));
     }
     public function update($id, Request $request)
     {

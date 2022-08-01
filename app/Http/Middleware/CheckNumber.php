@@ -20,7 +20,7 @@ class CheckNumber
         // 加入判斷 如果是會員登入的話
         if (Auth::check()) {
             // 判斷會員身分別是誰的話回傳到我要呈現的頁面
-            if (Auth::user()->name == 'admon') {
+            if (Auth::user()->name == 'admin') {
                 // 這邊會跟route那邊做連動
                 return $next($request);
             }

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="function-area">
 
-        <a class="create-msg" href="/index/create">新增貼文</a>
+        <a class="create-msg" href="/blog/create">新增貼文</a>
     </div>
     @foreach ($news as $item )
     <div class="news">
@@ -18,6 +18,7 @@
             <div class="news-time">{{substr( $item->created_at , 0 , 10)}}</div>
             <a href="/blog/edit/{{$item->id}}" class="edit">編輯</a>
             <a href="/blog/delete/{{$item->id}}" class="delete">刪除</a>
+          
         </div>
         <div class="news-content">
             <p>{{$item->content}}

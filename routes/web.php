@@ -52,11 +52,11 @@ Route::middleware('auth')->group(function(){
 
     //根據請求，對應到相對的controller
     // 加入判別自訂化middleware
-    Route::middleware('check')->get('/page',[NewsController::class,'index']);
+    // Route::middleware('check')->get('/page',[NewsController::class,'index']);
     //檢視資料
     Route::get('/blog',[BlogController::class,'index']);
     //屬性要一樣 新增/儲存資料表
-    Route::get('/index/create',[BlogController::class,'create']);
+    Route::get('/blog/create',[BlogController::class,'create']);
     Route::post('/blog/store',[BlogController::class,'store']);
 
     //編輯資料 laravel的路由中，可以利用花括弧{}去將網址的特定區段轉換成變數
