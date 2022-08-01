@@ -33,4 +33,8 @@ class Product extends Model
         //hasMany 三個參數 (我要關聯的model ,關聯過去的欄位,自己表的欄位)
         return $this->hasMany(ProductImg::class,'product_id','id');
     }
+    public function shoppingcart(){
+
+        return $this->hasMany(Product::class,'product_id','id');
+    }
 }

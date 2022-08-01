@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function shoppingcart(){
+        // 關聯寫法 關聯資料庫 然後寫入 要關聯過去的欄位,自己表的欄位
+        // 一個使用著有一台購物車
+        return $this->hasOne(shoppingCart::class,'user_id','id');
+    }
 }
