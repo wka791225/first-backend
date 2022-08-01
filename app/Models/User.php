@@ -48,4 +48,9 @@ class User extends Authenticatable
         // 一個使用著有一台購物車
         return $this->hasOne(shoppingCart::class,'user_id','id');
     }
+
+    public function order(){
+        // 一個使用者可以有很多個訂單
+        return $this->hasMany(Order::class,'user_id','id');
+    }
 }

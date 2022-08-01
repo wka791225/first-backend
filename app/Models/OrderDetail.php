@@ -28,7 +28,7 @@ class OrderDerail extends Model
     protected $fillable = ['order_id', 'product_id', 'qty', 'price', 'created_at', 'updated_at'];
 
     public function order(){
-        return $this->hasMany(Order::class,'id','order_id');
+        return $this->belongsTo(Order::class,'order_id','id');
     }
 
     public function shoppingCart(){

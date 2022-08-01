@@ -32,10 +32,13 @@ class Order extends Model
      */
     protected $fillable = ['user_id', 'address', 'tel', 'total', 'fare', 'pay_method', 'pay_status', 'transport', 'order_number', 'created_at', 'updated_at'];
 
-    public function user()
-    {
-        return $this->hasOne(User::class, 'user_id', 'user_id');
+    public function user(){
+        // 每份訂單都隸屬於一個使用者
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
-    
 
+    public function OrderDetail (){
+        // 每張訂單有很多品項
+        return $this->hasMany(OrderDetail::class,'order_id','id' );
+    }
 }
