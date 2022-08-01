@@ -42,29 +42,37 @@ Route::middleware('auth')->group(function(){
         Route::get('/delete/{id}',[ProductController::class,'delete']);
     });
 
+
+//根據請求，對應到相對的controller
+
+Route::prefix('/blog')->group(function(){
+
+    //檢視資料
+    Route::get('/',[BlogController::class,'index']);
+    //屬性要一樣 新增/儲存資料表
+    Route::get('/create',[BlogController::class,'create']);
+    Route::post('/store',[BlogController::class,'store']);
+
+    //編輯資料 laravel的路由中，可以利用花括弧{}去將網址的特定區段轉換成變數
+    Route::get('/edit/{id}',[BlogController::class,'edit']);
+    //更新資料
+    Route::post('/update/{id}',[BlogController::class,'update']);
+    //刪除
+    Route::get('/delete/{id}',[BlogController::class,'delete']);
+});
+
+
+
+
+
     // //檢視資料
     // Route::resource('/product','App\Http\Controllers\ThingController');
     // // Route::get('/product-create','App\Http\Controllers\ThingController@create');
 
-
-
-
-
-    //根據請求，對應到相對的controller
     // 加入判別自訂化middleware
     // Route::middleware('check')->get('/page',[NewsController::class,'index']);
-    //檢視資料
-    Route::get('/blog',[BlogController::class,'index']);
-    //屬性要一樣 新增/儲存資料表
-    Route::get('/blog/create',[BlogController::class,'create']);
-    Route::post('/blog/store',[BlogController::class,'store']);
 
-    //編輯資料 laravel的路由中，可以利用花括弧{}去將網址的特定區段轉換成變數
-    Route::get('/blog/edit/{id}',[BlogController::class,'edit']);
-    //更新資料
-    Route::post('/blog/update/{id}',[BlogController::class,'update']);
-    //刪除
-    Route::get('/blog/delete/{id}',[BlogController::class,'delete']);
+
 
 
 

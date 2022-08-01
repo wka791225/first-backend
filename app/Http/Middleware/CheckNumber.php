@@ -20,7 +20,7 @@ class CheckNumber
         // 加入判斷 如果是會員登入的話
         if (Auth::check()) {
             // 判斷會員身分別是誰的話回傳到我要呈現的頁面
-            if (Auth::user()->name == 'admin') {
+            if (Auth::user()->name == 'admon') {
                 // 這邊會跟route那邊做連動
                 return $next($request);
             }
@@ -28,6 +28,9 @@ class CheckNumber
         // 自動做登出功能
         Auth::logout();
         // 寫完後要在kernel.php 裡面增加一行引用才能在route的web.php 使用
-        return redirect('/')->with('message','你不是admin,你不可以進來');
+        // return redirect('/')->with('message','你不是admin,你不可以進來');
+        return redirect('/')->with('message','你不是admin,妳的IP是'.$request->ip());
+        // 傳進登入頁
+        // return redirect('/login')->with('message','你不是admin,你不可以進來');
     }
 }
